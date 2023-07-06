@@ -25,7 +25,7 @@ const SplashScreen = () => {
 
   function navigateToLogin() {
     setTimeout(() => {
-      navigation.navigate('Login');
+      navigation.navigate('Home_Screen');
     }, 1000);
   }
 

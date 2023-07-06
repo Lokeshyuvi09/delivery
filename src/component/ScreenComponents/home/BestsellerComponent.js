@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import {
   View,
   StyleSheet,
@@ -14,25 +15,30 @@ import {colors} from '../../../component/Styles/styleSheet';
 const IMAGE = [
   {
     uri: 'https://giri.in/safemart/media/catalog/product/cache/4/image/800x700/ac7adcb9541839760db32faba84f4f33/8/0/807177-1.jpg',
+    pics: 'https://img-global.cpcdn.com/recipes/ce9bfff18ad1192a/1200x630cq70/photo.jpg',
     product: 'Milk',
     items: '10 products',
+    count: '+6',
   },
   {
-    uri: 'https://giri.in/safemart/media/catalog/product/cache/4/image/800x700/ac7adcb9541839760db32faba84f4f33/8/0/807177-1.jpg',
+    pics: 'https://img-global.cpcdn.com/recipes/ce9bfff18ad1192a/1200x630cq70/photo.jpg',
+    uri: 'https://www.shutterstock.com/image-photo/home-made-cottage-cheese-known-260nw-1800581245.jpg',
     product: 'Vegetables',
     items: '10 products',
+    count: '+10',
   },
   {
-    uri: 'https://giri.in/safemart/media/catalog/product/cache/4/image/800x700/ac7adcb9541839760db32faba84f4f33/8/0/807177-1.jpg',
+    uri: 'https://img-global.cpcdn.com/recipes/ce9bfff18ad1192a/1200x630cq70/photo.jpg',
+    pics: 'https://www.shutterstock.com/image-photo/home-made-cottage-cheese-known-260nw-1800581245.jpg',
     product: 'Cooking Oil',
     items: '10 products',
+    count: '+6',
   },
 ];
 
 const BestSellersComponent = () => {
-  // eslint-disable-next-line react/no-unstable-nested-components
   const TitleComponent = () => (
-    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+    <View style={styles.titleView}>
       <TextView variant={'h5'} color={colors.black} style={styles.sellerStyle}>
         Bestsellers
       </TextView>
@@ -47,14 +53,13 @@ const BestSellersComponent = () => {
     </View>
   );
 
-  // // eslint-disable-next-line react/no-unstable-nested-components, react/no-unstable-nested-components, react/no-unstable-nested-components, react/no-unstable-nested-components, react/no-unstable-nested-components, react/no-unstable-nested-components, react/no-unstable-nested-components
   const RenderBestSeller = ({item}) => (
     <View>
       <TouchableOpacity>
         <View style={styles.backgroundFirstView}>
           <View style={styles.backgroundSecondView}>
             <Image source={{uri: item.uri}} style={styles.foodImageStyle} />
-            <Image source={{uri: item.uri}} style={styles.foodImageStyle} />
+            <Image source={{uri: item.pics}} style={styles.foodImageStyle} />
           </View>
           <View style={styles.backgroundThirdView}>
             <Image source={{uri: item.uri}} style={styles.foodImageStyle} />
@@ -63,7 +68,7 @@ const BestSellersComponent = () => {
                 variant={'h5'}
                 color={colors.black}
                 style={styles.foodImageText}>
-                +6
+                {item.count}
               </TextView>
             </View>
           </View>
@@ -84,7 +89,6 @@ const BestSellersComponent = () => {
     </View>
   );
 
-  // // eslint-disable-next-line react/no-unstable-nested-components
   const HorizontalFlatList = () => (
     <View style={styles.flatListStyles}>
       <FlatList data={IMAGE} renderItem={RenderBestSeller} horizontal />
@@ -93,10 +97,7 @@ const BestSellersComponent = () => {
 
   const BodyComponent = () => (
     <ScrollView horizontal>
-      <View
-        style={{
-          flexDirection: 'row',
-        }}>
+      <View style={styles.bodyView}>
         <HorizontalFlatList />
       </View>
     </ScrollView>
@@ -114,6 +115,9 @@ const styles = StyleSheet.create({
     marginHorizontal: wp(6),
     marginTop: hp(2),
   },
+  bodyView: {
+    flexDirection: 'row',
+  },
   itemsText: {
     marginTop: hp(-1),
     marginLeft: wp(5),
@@ -124,6 +128,7 @@ const styles = StyleSheet.create({
     maxWidth: wp(25),
     // alignSelf: 'center',
   },
+  titleView: {flexDirection: 'row', justifyContent: 'space-between'},
   backgroundFirstView: {
     width: wp(40),
     height: hp(20),

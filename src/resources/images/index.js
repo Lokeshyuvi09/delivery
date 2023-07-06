@@ -18,5 +18,7 @@ const Images = {
   Share: require('../../assets/My_Account/share.png'),
   about: require('../../assets/My_Account/about.png'),
   rateus: require('../../assets/My_Account/rate.png'),
+  down_arrow: require('../../assets/images/downarrow.png'),
+  mic_Icon: require('../../assets/images/mic.png'),
 };
 export default Images;
