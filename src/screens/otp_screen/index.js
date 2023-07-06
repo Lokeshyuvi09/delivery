@@ -44,7 +44,7 @@ const Otp_Screen = () => {
   // eslint-disable-next-line react/no-unstable-nested-components
   const TextComponent = () => (
     <View style={{marginTop: hp(8)}}>
-      <TextView variant={'h5'} color={colors.white} style={styles.textStyle}>
+      <TextView variant={'h5'} color={colors.black} style={styles.textStyle}>
         we have send OTP to your mobile...
       </TextView>
     </View>
@@ -75,7 +75,7 @@ const Otp_Screen = () => {
     <View>
       <TextView
         variant={'h6'}
-        color={colors.white}
+        color={colors.black}
         style={styles.resendOtpTextStyle}>
         Resend otp
       </TextView>
@@ -87,14 +87,14 @@ const Otp_Screen = () => {
   const LoginComponent = () => (
     <TouchableOpacity onPress={onLoginPressed}>
       <View style={styles.loginButtonStyles}>
-        <TextView variant={'sh4'} color={colors.orange}>
+        <TextView variant={'sh4'} color={colors.black}>
           Login
         </TextView>
       </View>
     </TouchableOpacity>
   );
   const onLoginPressed = () => {
-    navigation.navigate('Update_Profile');
+    navigation.navigate('Home_Screen');
   };
   return (
     <SafeAreaView style={styles.parrentContainer}>
@@ -110,13 +110,13 @@ const Otp_Screen = () => {
 };
 const styles = StyleSheet.create({
   parrentContainer: {
-    backgroundColor: colors.orange,
+    backgroundColor: colors.white,
     height: hp(100),
   },
   vectorImageStyle: {
     alignItems: 'center',
     alignSelf: 'center',
-    width: wp(26),
+    width: wp(30),
     height: hp(15),
     marginTop: hp(14),
   },
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
     marginTop: hp(15),
   },
   box: {
-    backgroundColor: colors.white,
+    backgroundColor: colors.primaryBorderColor,
     width: wp(13),
     height: hp(6),
     marginTop: hp(2),
@@ -148,12 +148,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     width: wp(21),
     height: hp(0.2),
-    backgroundColor: colors.white,
+    backgroundColor: colors.black,
     marginTop: hp(-0.4),
   },
   loginButtonStyles: {
     alignSelf: 'center',
-    backgroundColor: colors.white,
+    backgroundColor: colors.primaryBorderColor,
     borderRadius: hp(10),
     justifyContent: 'center',
     alignItems: 'center',

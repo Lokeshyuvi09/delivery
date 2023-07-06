@@ -16,6 +16,7 @@ import {InputBox} from '../../component/InputBox/index';
 import {LocalImageView} from '../../component/Image/index';
 import {colors, commonColors} from '../../component/Styles/styleSheet';
 import MyAccountScreenComponent from '../../component/ScreenComponents/MyAccountScreenComponent';
+import GetFeedingReceiptComponent from '../../component/ScreenComponents/GetFeedingReceiptComponent';
 
 const My_Account = () => {
   // eslint-disable-next-line react/no-unstable-nested-components
@@ -47,6 +48,7 @@ const My_Account = () => {
         <AccountTextComponent />
         <ContinueComponent />
         <MyAccountScreenComponent />
+        <GetFeedingReceiptComponent />
       </ScrollView>
     </SafeAreaView>
   );

@@ -52,7 +52,7 @@ const ShopStoreComponent = () => {
     <View>
       <TextView
         variant={'h3'}
-        color={colors.white}
+        color={colors.black}
         style={styles.storeTextStyle}>
         Shop by Store
       </TextView>
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginLeft: wp(6),
     fontSize: 16,
-    color: colors.white,
+    color: colors.black,
     marginTop: hp(2),
   },
   healthDrinkFlatListStyles: {

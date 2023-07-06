@@ -35,7 +35,7 @@ const Login = () => {
   const LoginComponent = () => (
     <TouchableOpacity onPress={onLoginPressed}>
       <View style={styles.loginButtonStyles}>
-        <TextView variant={'sh4'} color={colors.orange}>
+        <TextView variant={'sh4'} color={colors.black}>
           Login
         </TextView>
       </View>
@@ -51,7 +51,7 @@ const Login = () => {
       <View style={{marginTop: hp(8)}}>
         <TextView
           variant={'h5'}
-          color={colors.white}
+          color={colors.black}
           style={styles.mobileNumberTextStyle}>
           Mobile Number
         </TextView>
@@ -63,7 +63,7 @@ const Login = () => {
         hint="Phone Number"
         defaultValue={phoneNumber}
         value={setPhoneNumber}
-        placeholderTextColor="#FF4B3A"
+        placeholderTextColor="#000"
       />
     </View>
   );
@@ -80,18 +80,18 @@ const Login = () => {
 };
 const styles = StyleSheet.create({
   parrentContainer: {
-    backgroundColor: colors.orange,
+    backgroundColor: colors.white,
     height: hp(100),
   },
   vectorImageStyle: {
     alignItems: 'center',
     alignSelf: 'center',
-    width: wp(26),
+    width: wp(30),
     height: hp(15),
-    marginTop: hp(8),
+    marginTop: hp(12),
   },
   mobileNumberTextStyle: {
-    marginTop: hp(12),
+    marginTop: hp(6),
     marginHorizontal: wp(10),
   },
   textInput: {
@@ -102,12 +102,11 @@ const styles = StyleSheet.create({
     marginHorizontal: wp(8),
     borderWidth: wp(0.3),
     borderRadius: wp(2),
-    backgroundColor: colors.white,
-    placeholderTextColor: colors.orange,
+    backgroundColor: colors.primaryBorderColor,
   },
   loginButtonStyles: {
     alignSelf: 'center',
-    backgroundColor: colors.white,
+    backgroundColor: colors.primaryBorderColor,
     borderRadius: hp(10),
     justifyContent: 'center',
     alignItems: 'center',

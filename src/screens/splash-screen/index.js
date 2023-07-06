@@ -25,7 +25,7 @@ const SplashScreen = () => {
 
   function navigateToLogin() {
     setTimeout(() => {
-      navigation.navigate('Login');
+      navigation.navigate('Home_Screen');
     }, 1000);
   }
 
@@ -38,7 +38,7 @@ const SplashScreen = () => {
             style={styles.vectorImageStyle}
           />
         </TouchableOpacity>
-        <TextView variant={'h1'} color={colors.white} style={styles.textStyle}>
+        <TextView variant={'h1'} color={colors.black} style={styles.textStyle}>
           Food for Everyone
         </TextView>
         <Image source={Images.SplashScreen} style={styles.deliveryBikeStyle} />
@@ -58,7 +58,7 @@ const SplashScreen = () => {
 };
 const styles = StyleSheet.create({
   parrentContainer: {
-    backgroundColor: colors.orange,
+    backgroundColor: colors.sunshine_yellow,
     height: hp(100),
   },
   deliveryBikeStyle: {

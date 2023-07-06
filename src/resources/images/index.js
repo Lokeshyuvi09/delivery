@@ -1,5 +1,5 @@
 const Images = {
-  SplashScreenVector: require('../../assets/splash_screen/Vector(3).png'),
+  SplashScreenVector: require('../../assets/splash_screen/bike.png'),
   SplashScreen: require('../../assets/splash_screen/food_bike.png'),
   Elipse: require('../../assets/Home_Screen/Ellipse14.png'),
   imagevector: require('../../assets/Home_Screen/Image1.png'),
@@ -13,5 +13,12 @@ const Images = {
   Support: require('../../assets/My_Account/support.png'),
   Payments: require('../../assets/My_Account/payment.png'),
   Arrow: require('../../assets/My_Account/arrow.png'),
+  orders: require('../../assets/My_Account/order.png'),
+  AddressBook: require('../../assets/My_Account/addressbook.png'),
+  Share: require('../../assets/My_Account/share.png'),
+  about: require('../../assets/My_Account/about.png'),
+  rateus: require('../../assets/My_Account/rate.png'),
+  down_arrow: require('../../assets/images/downarrow.png'),
+  mic_Icon: require('../../assets/images/mic.png'),
 };
 export default Images;

@@ -17,10 +17,7 @@ export const commonColors = {
   active: '#FB6304',
   lightColor: '#4B4B4B',
   inactiveColor: '#4B4B4B',
-  GREYS: {
-    C1: '#DCDCDC',
-    C2: '#494949',
-  },
+  GREYS: '#EAEBF3',
   videoTextTitleColor: '#EAEAEA',
   tab: '#F4F4F4',
   bgWhite: '#fff',
@@ -33,8 +30,8 @@ export const commonColors = {
   lightBlue_2: 'rgba(0,123,139,.8)',
   lightBlue_4: 'rgba(0,54,63,.4)',
   lightBlue_3: '#0D859B',
-  lightBlue_3: '#0D859B',
-
+  BLUES: '#2B52F6',
+  sunshine_yellow: '#FFFD37',
   green: '#00920D',
   green2: '#00363F',
   dark_blue: '#007B8B',
@@ -76,6 +73,7 @@ export const colors = new ThemeManager({
     appBackgroundColor: '#fff',
     shareBg: '#F4F4F4',
     titleTextColor: '#4D4949',
+    BLUES: '#2B52F6',
   },
   LIGHT: {
     ...commonColors,
@@ -97,6 +95,7 @@ export const colors = new ThemeManager({
     appBackgroundColor: '#101010',
     shareBg: '#101010',
     titleTextColor: '#f4f4f4',
+    BLUES: '#2B52F6',
   },
 });
 
@@ -106,10 +105,7 @@ export const colors = new ThemeManager({
 //   primaryTextColor: '#3E3E3E',
 //   background: '#0B98AF',
 //   active: '#FB6304',
-//   BLUES: {
-//     B1: '#2B52F6',
-//     B2: '#265ED7',
-//   },
+//   BLUES: '#2B52F6',
 //   GREYS: {
 //     C1: '#3E3E3E',
 //     C2: '#7C7C7C',

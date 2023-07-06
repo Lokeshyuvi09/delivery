@@ -17,6 +17,10 @@ const AuthNavigation = () => (
       <Stack.Screen name="Home_Screen" component={SCREENS.HOME_SCREEN} />
       <Stack.Screen name="Category_Page" component={SCREENS.CATEGORY_PAGE} />
       <Stack.Screen name="My_Account" component={SCREENS.MY_ACCOUNT} />
+      <Stack.Screen
+        name="SEE_ALL_COMPONENT"
+        component={SCREENS.SEE_ALL_COMPONENT}
+      />
     </Stack.Navigator>
   </NavigationContainer>
 );
